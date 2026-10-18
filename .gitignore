@@ -1,0 +1,31 @@
+.DS_Store
+.serverless
+
+# Ignore large raw archives and data files to prevent bloating the git repo
+archive*/
+*.csv
+*.parquet
+*.zip
+data/**/*.csv
+data/**/*.parquet
+data/**/*.zip
+data/*.csv
+
+# Local Hadoop/Winutils binaries for Windows
+hadoop/
+
+# Keep the directory structure intact
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/analytics/.gitkeep
+!data/analytics/visuals/.gitkeep
+
+# Ignore virtual environments and python cache
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Ignore MLflow artifacts
+mlruns/
+
